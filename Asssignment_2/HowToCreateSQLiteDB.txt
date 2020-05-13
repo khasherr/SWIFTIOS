@@ -1,0 +1,19 @@
+(How to create an SQLite3 Database 
+
+1) Open a terminal
+2) Run the sqlite3 command prompt command and specify a database file name (example here will be W10Database.sql)
+    -> sqlite3 W10Database.sql
+3) Create a table.  In this example, we will have 4 columns and the table will be called "entries":
+    - ID (integer & primary key not null)
+    - Name (text)
+    - Email (text)
+    - Food (text)
+    -> create table entries(ID integer primary key, Name text, Email text, Food text,Avatar text);
+4) Lets insert a sample row (feel free to add more if you wish)
+    -> insert into entries values (NULL, 'Jim Kirk', 'jim@kirk.com', 'Pizza','1');
+5) Verify that the rows were entered properly and that the ID column auto increments:
+    -> select * from entries;
+6) Once verified quit SQLite3
+    -> .quit
+7) Now import "W10Database.sql" into your Xcode project (make sure you check the "copy items into destination folder" checkbox.
+8) Next step is to write the code to access this database in your app .....
